@@ -29,9 +29,14 @@ There might be mistakes or more elegant ways of achieving that, however, I do no
 
 Refferences and thanks to:
 https://git.sr.ht/~avery/recapture
+
 https://crankshaft.space/
+
 https://github.com/Plagman/gamescope/issues/561
+
 https://stackoverflow.com/questions/15266329/in-a-bash-script-that-uses-zenity-progress-progress-bar-reading-from-a-pipe-h
+
 https://steamcommunity.com/app/1675200/discussions/0/3387291961143576207/
+
 
 There are probably more that I have missed to mention.
