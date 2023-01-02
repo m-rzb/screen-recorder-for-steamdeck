@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[en_GB]=
 Comment=
-Exec=/bin/bash /home/deck/Desktop/Recapture/recapture-crankshaft_plugin.sh
+Exec=/bin/bash /home/deck/Desktop/recapture-crankshaft_plugin.sh
 GenericName[en_GB]=
 GenericName=
 Icon=media-record-symbolic
