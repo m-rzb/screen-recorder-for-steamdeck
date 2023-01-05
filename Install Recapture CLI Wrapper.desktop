@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Install Recapture CLI Wrapper
+Exec=curl https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/testing/install-recapture-cli.sh | bash -s --
+Icon=media-record-symbolic
+Terminal=true
+Type=Application
+StartupNotify=false

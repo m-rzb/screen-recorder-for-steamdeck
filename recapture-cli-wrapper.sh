@@ -29,12 +29,12 @@
 
 LD_PRELOAD=${LD_PRELOAD/_32/_64}
 
-cd '/home/deck/.var/app/space.crankshaft.Crankshaft/data/crankshaft/plugins/recapture/dist/deps'
+cd '/home/deck/.local/recapture'
 echo $PWD
 
 GST_VAAPI_ALL_DRIVERS=1 \
-GST_PLUGIN_PATH=/home/deck/.var/app/space.crankshaft.Crankshaft/data/crankshaft/plugins/recapture/dist/deps/plugins \
-LD_LIBRARY_PATH=/home/deck/.var/app/space.crankshaft.Crankshaft/data/crankshaft/plugins/recapture/dist/deps/lib \
+GST_PLUGIN_PATH=/home/deck/.local/recapture/plugins \
+LD_LIBRARY_PATH=/home/deck/.local/recapture/lib \
 ./recapture record \
 -audio-device "alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_1__sink.monitor" \
 & PIPED_PID=$!
@@ -44,3 +44,4 @@ while kill -s 0 $PIPED_PID; do sleep .1; done |
 ( zenity --progress --window-icon=/usr/share/icons/breeze/actions/16/media-record.svg --width 500 --height 35 --title="Recording in progress" --text='<span font="14" >Screen recording is in progress!\n\nPress <b>Cancel</b> to stop recording.</span>' --pulsate --default-cancel  || kill -2 $PIPED_PID )
 
 
+ 
