@@ -30,7 +30,7 @@ chmod +x $HOME/.local/recapture/recapture
 
 # Download Recapture CLI wrapper
 wget -O recapture_dl_dir/recapture-cli-wrapper.sh \
-        https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/testing/recapture-cli-wrapper.sh
+        https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/recapture-cli-wrapper.sh
         
 # Move bash script to instalation directory
 mv recapture_dl_dir/recapture-cli-wrapper.sh $HOME/.local/recapture/recapture-cli-wrapper.sh
