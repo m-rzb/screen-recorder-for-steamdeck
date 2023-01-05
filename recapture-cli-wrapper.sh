@@ -18,23 +18,23 @@
 #   -length int
 #         Length in seconds of replays (default 30)
 #   -o string
-#         Directory to save recordings to (default "/home/deck/Videos/recapture")
+#         Directory to save recordings to (default "$HOME/Videos/recapture")
 #   -source string
 #         The screen recording source, either "pipewire" or "x11" (default "pipewire")
 #   -tmp string
-#         Directory to save temporary recordings to (only for replay recording) (default "/home/deck/Videos/recapture/.tmp")
+#         Directory to save temporary recordings to (only for replay recording) (default "$HOME/Videos/recapture/.tmp")
 #   -verbose
 #         Print extra debugging info
 
 
 LD_PRELOAD=${LD_PRELOAD/_32/_64}
 
-cd '/home/deck/.local/recapture'
+cd '$HOME/.local/recapture'
 echo $PWD
 
 GST_VAAPI_ALL_DRIVERS=1 \
-GST_PLUGIN_PATH=/home/deck/.local/recapture/plugins \
-LD_LIBRARY_PATH=/home/deck/.local/recapture/lib \
+GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \
+LD_LIBRARY_PATH=$HOME/.local/recapture/lib \
 ./recapture record \
 -audio-device "alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_1__sink.monitor" \
 & PIPED_PID=$!
