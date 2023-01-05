@@ -8,6 +8,9 @@ You would require to install the Crankshaft flatpak first and then the recapture
 See installation instructions at https://crankshaft.space/
 
 
+Download "Install Recapture CLI Wrapper.desktop" using this link [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/testing/Install%20Recapture%20CLI%20Wrapper.desktop) on your Steam Deck, then run it. (Right click and save file.)
+
+
 On Steam Deck the Recapture plugin should be installed here:
 /home/deck/.var/app/space.crankshaft.Crankshaft/data/crankshaft/plugins/recapture/
 
