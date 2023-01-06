@@ -10,6 +10,7 @@ if wget --spider ${DL_URL} 2>/dev/null;
     echo "OK! Recapture file exists at ${DL_URL}"
  else
     echo "ERROR! Online URL ${DL_URL} is not found!"
+    exit 1
 fi
 
 # Create plugin instalation directory
