@@ -1,4 +1,4 @@
-# Screen recorder for Steam Deck (Game MOde only)
+# Screen recorder for Steam Deck (Game Mode only)
 Screen recorder for Steam deck in Game Mode, using a basic, quick and dirty bash script and the Recapture Plugin from Crankshaft project.
 
 Big thanks to the Crankshaft project!
@@ -50,4 +50,4 @@ https://stackoverflow.com/questions/15266329/in-a-bash-script-that-uses-zenity-p
 https://steamcommunity.com/app/1675200/discussions/0/3387291961143576207/
 
 
-There are probably more that I have missed to mention.
+There are probably more sources that I have used as reference and missed to mention.
