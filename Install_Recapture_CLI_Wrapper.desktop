@@ -6,3 +6,4 @@ Icon=media-record-symbolic
 Terminal=true
 Type=Application
 StartupNotify=false
+

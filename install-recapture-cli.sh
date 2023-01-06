@@ -1,5 +1,6 @@
-
 #!/bin/bash
+#
+#
 
 # Check if the download URL exists.
 DL_URL="https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz"
