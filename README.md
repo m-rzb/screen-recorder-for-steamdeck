@@ -18,7 +18,7 @@ No need to make the file executable. Double clicking the downloaded file will do
 
 You should add now the Recapture.desktop file as Non-Steam Game. Recapture records the screen only in Game Mode!
 
-You can delete the 'Install_Recapture_CLI_Wrapper.desktop` file now.
+You can delete the "Install_Recapture_CLI_Wrapper.desktop" file now.
 
 Note: Executing Recapture.desktop in Desktop Mode will not record the screen. Recording will fail, even though you will find a new video file in ~/Videos/recapture.
 
