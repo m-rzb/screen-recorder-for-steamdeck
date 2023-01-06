@@ -16,7 +16,7 @@ Download `Install_Recapture_CLI_Wrapper.desktop` using this link [this link](htt
 
 No need to make the file executable. Double-clicking the downloaded file will download the Recapture plugin, install a script and create a Desktop Icon. 
 
-You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture records the screen only in Game Mode!
+You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture plugin records the screen only in Game Mode!
 
 You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now.
 
@@ -31,7 +31,7 @@ Note: To make selecting Cancel button easier, go to Recapture's Controller Setti
 
 ------------
  
-## Warning !
+## Warning!
 
 There has been no extensive testing, and the script and the recapture plugin has been working at the time of writing of this script. The script is provided as is. I make no promises and give no guarantees. I would not be responsible for any damages caused to your Steam Deck, house, pet etc. Use it at your own risk!
 There might be mistakes in the scripts or more elegant ways of achieving that, however, I do not write code for a living and my free time is limited.
