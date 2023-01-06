@@ -33,8 +33,9 @@ Note: To make selecting Cancel button easier, go to Recapture's Controller Setti
  
 ## Warning!
 
-There has been no extensive testing, and the script and the recapture plugin has been working at the time of writing of this script. The script is provided as is. I make no promises and give no guarantees. I would not be responsible for any damages caused to your Steam Deck, house, pet etc. Use it at your own risk!
-There might be mistakes in the scripts or more elegant ways of achieving that, however, I do not write code for a living and my free time is limited.
+There has been no extensive testing! The script and the Recapture plugin has been working for me at the time of writing of this script. The script is provided as is. I make no promises and give no guarantees. I would not be responsible for any damages caused to your Steam Deck, house, pet etc. Use it at your own risk!
+
+There might be mistakes in the scripts or more elegant ways of achieving those tasks, however, I do not write code for a living and my free time is limited.
 
 
 ## References and thanks to:
