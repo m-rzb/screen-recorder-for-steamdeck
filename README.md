@@ -6,25 +6,25 @@ Big thanks to the Crankshaft project!
 
 ## Why?
 
-I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to achieve what I wanted or just did not work in Game Mode. Installing Recapture plugin with the bash script locally does not require turning off the read-only filesystem on the Steam Deck, installing additional packages or distrobox etc. It is very primitive and has only an option to start and stop recording, however, I hope it will be useful for other as well.
+I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to achieve what I wanted or just did not work in Game Mode. Installing Recapture plugin with the bash script locally does not require turning off the read-only filesystem on the Steam Deck, installing additional packages or distrobox etc. It is very primitive and has only an option to start and stop recording, however, I hope it will be useful for others as well.
 
 
 ## Installing on your Steam Deck
 
 You need to be in Desktop Mode.
-Download "Install_Recapture_CLI_Wrapper.desktop" using this link [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/testing/Install%20Recapture%20CLI%20Wrapper.desktop) on your Steam Deck. Right click the link and save the file somewhere you can find it. 
+Download `Install_Recapture_CLI_Wrapper.desktop` using this link [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/testing/Install%20Recapture%20CLI%20Wrapper.desktop) on your Steam Deck. Right click the link and save the file somewhere you can find it. 
 
 No need to make the file executable. Double clicking the downloaded file will download the Recapture plugin, install a script and create a Desktop Icon. 
 
 You should add now the Recapture.desktop file as Non-Steam Game. Recapture records the screen only in Game Mode!
 
-You can delete the "Install_Recapture_CLI_Wrapper.desktop" file now.
+You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now.
 
-Note: Executing Recapture.desktop in Desktop Mode will not record the screen. Recording will fail, even though you will find a new video file in ~/Videos/recapture.
+Note: Executing Recapture.desktop in Desktop Mode will not record the screen. Recording will fail, even though you will find a new video file in `~/Videos/recapture`.
 
 Back in Game Mode, you should be able to find Recapture app/shortcut. 
 
-The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mp4 in ~/Videos/recapture directory.
+The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mp4 in `~/Videos/recapture directory`.
 
 Note: To make selecting Cancel button easier, go to Recapture's Controller Settings and select "Web Browser" as Current Layout. Now you should be able to press on Cancel by using A button or use the mouse on Steam Deck. You can also Cancel recording by selecting Home, from the left Steam menu, selecting Recapture app and closing the app from there.
 
