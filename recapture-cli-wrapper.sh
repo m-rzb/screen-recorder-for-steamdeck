@@ -32,11 +32,14 @@ LD_PRELOAD=${LD_PRELOAD/_32/_64}
 cd $HOME/.local/recapture
 echo $PWD
 
+AUDIO_DEVICE=$(pactl get-default-sink)
+
 GST_VAAPI_ALL_DRIVERS=1 \
 GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \
 LD_LIBRARY_PATH=$HOME/.local/recapture/lib \
 ./recapture record \
--audio-device "alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_1__sink.monitor" \
+# -audio-device "alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_1__sink.monitor" \
+-audio-device "$AUDIO_DEVICE.monitor" \
 & PIPED_PID=$!
 
 while kill -s 0 $PIPED_PID; do sleep .1; done |
