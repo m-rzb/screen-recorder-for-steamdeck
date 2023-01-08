@@ -33,7 +33,7 @@ cd $HOME/.local/recapture
 echo $PWD
 
 AUDIO_DEVICE=$(pactl get-default-sink)
-echo $AUDIO_DEVICE
+echo "Currently detected default audio device is '$AUDIO_DEVICE'. This device will be used to record the audio from."
 
 GST_VAAPI_ALL_DRIVERS=1 \
 GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \

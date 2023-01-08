@@ -13,9 +13,18 @@ if wget --spider ${DL_URL} 2>/dev/null;
     exit 1
 fi
 
+# Remove previously created directory if exists.
+echo "Removing existing instalation directory, if it was previously created."
+sleep 1
+rm -rf $HOME/.local/recapture &>/dev/null
+
 # Create plugin instalation directory
+echo "We need to create the instalation directory."
+sleep 1
 mkdir -p $HOME/.local/recapture
 
+echo "Installing the plugin and scripts"
+echo 1
 # Download Recapture plugin.
 mkdir -p /tmp/recapture_dl_dir/plugin                        
 cd /tmp  
