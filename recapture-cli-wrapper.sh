@@ -32,21 +32,8 @@ LD_PRELOAD=${LD_PRELOAD/_32/_64}
 cd $HOME/.local/recapture
 echo $PWD
 
-HDMI_AUDIO_DEVICE="alsa_output.pci-0000_04_00.1.hdmi-stereo-extra2"
-HEADPHONE_AUDIO_DEVICE="alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_0__sink"
-SPEAKER_AUDIO_DEVICE="alsa_output.pci-0000_04_00.5-platform-acp5x_mach.0.HiFi__hw_acp5x_1__sink"
-ECHO_AUDIO_DEVICE="echo-cancel-sink"
-
-# 1. HDMI 2. Headphone 3. Speaker 4. Echo(default)
-if [[ $(pw-cli list-objects | grep $HDMI_AUDIO_DEVICE) ]]; then
-    AUDIO_DEVICE=$HDMI_AUDIO_DEVICE
-elif [[ $(pw-cli list-objects | grep $HEADPHONE_AUDIO_DEVICE) ]]; then
-    AUDIO_DEVICE=$HEADPHONE_AUDIO_DEVICE
-elif [[ $(pw-cli list-objects | grep $SPEAKER_AUDIO_DEVICE) ]]; then
-    AUDIO_DEVICE=$SPEAKER_AUDIO_DEVICE
-else
-    AUDIO_DEVICE=$ECHO_AUDIO_DEVICE
-fi
+AUDIO_DEVICE=$(pactl get-default-sink)
+echo $AUDIO_DEVICE
 
 GST_VAAPI_ALL_DRIVERS=1 \
 GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \
