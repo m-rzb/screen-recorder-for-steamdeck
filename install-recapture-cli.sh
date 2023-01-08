@@ -14,7 +14,7 @@ if wget --spider ${DL_URL} 2>/dev/null;
 fi
 
 # Remove previously created directory if exists.
-echo "Removing existing instalation directory, if it was previously created."
+echo "Removing existing installation directory, if it was previously created."
 sleep 1
 rm -rf $HOME/.local/recapture &>/dev/null
 
