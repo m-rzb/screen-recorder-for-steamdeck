@@ -24,7 +24,7 @@ sleep 1
 mkdir -p $HOME/.local/recapture
 
 echo "Installing the plugin and scripts"
-echo 1
+sleep 1
 # Download Recapture plugin.
 mkdir -p /tmp/recapture_dl_dir/plugin                        
 cd /tmp  
