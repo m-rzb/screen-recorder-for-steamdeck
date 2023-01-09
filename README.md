@@ -1,10 +1,12 @@
-# Simple Screen Recorder for Steam Deck (Game Mode only)
-Screen recorder for Steam deck in Game Mode, using a basic, quick and dirty script around the Recapture Plugin from Crankshaft project.
+# Simple Screen Recorder for Steam Deck
+Screen recorder for Steam deck, using a basic, quick and dirty script around the Recapture Plugin from Crankshaft project.
 
 Using [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture)
 
 Big thanks to the Crankshaft project!
 
+
+**Note:** The script will download the Recapture binary and the libraries from Avery's Recapture archive. In addition, for screen recording to work in Desktop Mode the libgstximagesrc.so will be downloaded from the steamos extra repo. I do not maintain those repos and libraries! If the URLs to those repos change or the archives are removed, the script will not function.
 
 ## Why?
 
@@ -20,9 +22,7 @@ No need to make the file executable. Double-clicking the downloaded file will do
 
 You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture plugin records the screen only in Game Mode!
 
-You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now.
-
-**Note:** Executing (double-clicking) Recapture.desktop in Desktop Mode will not record the screen. Recording will fail, even though you will find a new mp4 video file (with size 0 B) in `~/Videos/recapture`.
+You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now. 
 
 Back in Game Mode, you should be able to find Recapture app/shortcut. 
 
