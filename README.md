@@ -1,5 +1,5 @@
 # Screen recorder for Steam Deck (Game Mode only)
-Screen recorder for Steam deck in Game Mode, using a basic, quick and dirty bash script and the Recapture Plugin from Crankshaft project.
+Screen recorder for Steam deck in Game Mode, using a basic, quick and dirty script around the Recapture Plugin from Crankshaft project.
 
 Using [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture)
 
