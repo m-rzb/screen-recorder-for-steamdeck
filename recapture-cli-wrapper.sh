@@ -30,16 +30,19 @@
 LD_PRELOAD=${LD_PRELOAD/_32/_64}
 
 # Check if current session is using the Wayland Display Server or x11
-echo ${XDG_SESSION_TYPE}
-if [ "${XDG_SESSION_TYPE}" != "wayland" ]; then
-    echo "This session does not use the Wayland Display Server."
-    echo "For screen recording on '${XDG_SESSION_TYPE}' we should use 'x11' as source as well"
-    RECORDING_SOURCE=x11
-else 
-    echo "This session uses the Wayland Display Server."
-    echo "For screen recording on '${XDG_SESSION_TYPE}' we should use 'pipewire' as source"
-    RECORDING_SOURCE=pipewire
-fi
+# for screen recording to work in Desktop Mode we require libgstximagesrc.so good plugins lib
+#echo ${XDG_SESSION_TYPE}
+#if [ "${XDG_SESSION_TYPE}" != "wayland" ]; then
+#    echo "This session does not use the Wayland Display Server."
+#    echo "For screen recording on '${XDG_SESSION_TYPE}' we should use 'x11' as source as well"
+#    RECORDING_SOURCE=x11
+#else 
+#    echo "This session uses the Wayland Display Server."
+#    echo "For screen recording on '${XDG_SESSION_TYPE}' we should use 'pipewire' as source"
+#    RECORDING_SOURCE=pipewire
+#fi
+
+RECORDING_SOURCE=pipewire
 
 # Check default audio device
 AUDIO_DEVICE=$(pactl get-default-sink)
