@@ -49,7 +49,6 @@ echo "This device will be used to record the audio from."
 cd $HOME/.local/recapture
 echo $PWD
 
-GST_DEBUG=3 \
 GST_VAAPI_ALL_DRIVERS=1 \
 GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \
 LD_LIBRARY_PATH=$HOME/.local/recapture/lib \
