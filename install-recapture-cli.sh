@@ -42,12 +42,12 @@ chmod +x $HOME/.local/recapture/recapture
 sleep 1
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
 # Lets download it form steamos extra-rel repo
-mkdir -p /tmp/recapture_dl_dir/plugin/good
-	wget \
-		-O recapture_dl_dir/gst-plugins-good.pkg.tar.zst \
-		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst
-	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-good.pkg.tar.zst -C recapture_dl_dir/plugin/good
-	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/libgstximagesrc.so $HOME/.local/recapture/plugins/good
+#mkdir -p /tmp/recapture_dl_dir/plugin/good
+#	wget \
+#		-O recapture_dl_dir/gst-plugins-good.pkg.tar.zst \
+#		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst
+#	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-good.pkg.tar.zst -C recapture_dl_dir/plugin/good
+#	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/libgstximagesrc.so $HOME/.local/recapture/plugins/good
 
 # Download Recapture CLI wrapper
 wget -O recapture_dl_dir/recapture-cli-wrapper.sh \
