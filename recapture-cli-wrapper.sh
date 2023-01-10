@@ -32,7 +32,7 @@ LD_PRELOAD=${LD_PRELOAD/_32/_64}
 # Check if current session is using the Wayland Display Server or x11
 # echo ${XDG_SESSION_TYPE} # this is not identifying the sessions correctly on Steam Deck
 # Lets try with with loginctl instead..
-LOGIN_SESSION_TYPE=${loginctl show-session $(loginctl|grep $USER|awk '/'"seat0"'/{print $1}') -p Type | cut -d'=' -f2}
+LOGIN_SESSION_TYPE=$(loginctl show-session $(loginctl|grep $USER|awk '/'"seat0"'/{print $1}') -p Type | cut -d'=' -f2)
 
 if [ "${LOGIN_SESSION_TYPE}" != "wayland" ]; then
     echo "This session does not use the Wayland Display Server."
