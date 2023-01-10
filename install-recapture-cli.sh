@@ -42,12 +42,12 @@ chmod +x $HOME/.local/recapture/recapture
 sleep 1
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
 # Lets download it form steamos extra-rel repo
-#mkdir -p /tmp/recapture_dl_dir/plugin/good
-#	wget \
-#		-O recapture_dl_dir/gst-plugins-good.pkg.tar.zst \
-#		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst
-#	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-good.pkg.tar.zst -C recapture_dl_dir/plugin/good
-#	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/libgstximagesrc.so $HOME/.local/recapture/plugins/good
+mkdir -p /tmp/recapture_dl_dir/plugin/good
+	wget \
+		-O recapture_dl_dir/gst-plugins-good.pkg.tar.zst \
+		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst
+	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-good.pkg.tar.zst -C recapture_dl_dir/plugin/good
+	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/libgstximagesrc.so $HOME/.local/recapture/plugins/good
 
 # Download Recapture CLI wrapper
 wget -O recapture_dl_dir/recapture-cli-wrapper.sh \
@@ -59,10 +59,12 @@ mv recapture_dl_dir/recapture-cli-wrapper.sh $HOME/.local/recapture/recapture-cl
 # Make bash script executable
 chmod +x $HOME/.local/recapture/recapture-cli-wrapper.sh
 
-# Remove previously created Desktop icon
+# Removing previously created Desktop icon
 rm -rf ~/Desktop/Recapture.desktop 2>/dev/null
 
+
 # Create a Desktop icon
+echo "Creating a Desktop Icon"
 echo '[Desktop Entry]
 Comment=
 Exec=/bin/bash $HOME/.local/recapture/recapture-cli-wrapper.sh
@@ -78,5 +80,10 @@ Type=Application' > $HOME/Desktop/Recapture.desktop
 
 
 # Remove downloaded files from /tmp
+echo "Removing downloaded archives. we do not require them anymore."
 rm -rf /tmp/recapture_dl_dir 
 
+echo "You can now close the terminal window by using CTRL+C or ENTER"
+# alternatively
+# exec bash
+read
