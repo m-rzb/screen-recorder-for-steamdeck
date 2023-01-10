@@ -80,3 +80,7 @@ Type=Application' > $HOME/Desktop/Recapture.desktop
 # Remove downloaded files from /tmp
 rm -rf /tmp/recapture_dl_dir 
 
+# echo "You can now close the terminal window by using CTRL+C or ENTER"
+# read
+# alternatively
+# exec bash
