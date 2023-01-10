@@ -83,7 +83,7 @@ Type=Application' > $HOME/Desktop/Recapture.desktop
 echo "Removing downloaded archives. we do not require them anymore."
 rm -rf /tmp/recapture_dl_dir 
 
-echo "You can now close the terminal window by using CTRL+C or ENTER"
+#echo "You can now close the terminal window by using CTRL+C or ENTER"
 # alternatively
 # exec bash
-read
+#read
