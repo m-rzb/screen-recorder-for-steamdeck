@@ -18,8 +18,8 @@ echo "Removing existing installation directory, if it was previously created."
 sleep 1
 rm -rf $HOME/.local/recapture &>/dev/null
 
-# Create plugin instalation directory
-echo "We need to create the instalation directory."
+# Create plugin installation directory
+echo "We need to create the installation directory."
 sleep 1
 mkdir -p $HOME/.local/recapture
 
@@ -33,14 +33,14 @@ wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
 		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
 tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
 
-# Move downloaded binary and libs to instalation directory
+# Move downloaded binary and libs to installation directory
 mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
 
 # Make Recapture binary executable
 chmod +x $HOME/.local/recapture/recapture
 
 sleep 1
-# For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
+# For the screen recording to work in Desktop mode, we require gstreamer good plugin ximagesrc
 # Lets download it form steamos extra-rel repo
 mkdir -p /tmp/recapture_dl_dir/plugin/good
 	wget \
@@ -53,7 +53,7 @@ mkdir -p /tmp/recapture_dl_dir/plugin/good
 wget -O recapture_dl_dir/recapture-cli-wrapper.sh \
         https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/recapture-cli-wrapper.sh
         
-# Move bash script to instalation directory
+# Move bash script to installation directory
 mv recapture_dl_dir/recapture-cli-wrapper.sh $HOME/.local/recapture/recapture-cli-wrapper.sh
 
 # Make bash script executable
@@ -80,7 +80,7 @@ Type=Application' > $HOME/Desktop/Recapture.desktop
 # Remove downloaded files from /tmp
 rm -rf /tmp/recapture_dl_dir 
 
-# echo "You can now close the terminal window by using CTRL+C or ENTER"
-# read
+echo "You can now close the terminal window by using CTRL+C or ENTER"
+read
 # alternatively
-# exec bash
+#exec bash
