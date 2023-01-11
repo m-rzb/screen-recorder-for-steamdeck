@@ -3,13 +3,23 @@
 #
 
 # Check if the download URL exists.
-DL_URL="https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz"
+RECAPTURE_URL="https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz"
 
-if wget --spider ${DL_URL} 2>/dev/null; 
+if wget --spider ${RECAPTURE_URL} 2>/dev/null; 
  then
-    echo "OK! Recapture file exists at ${DL_URL}"
+    echo "OK! Recapture file exists at ${RECAPTURE_URL}"
  else
-    echo "ERROR! Online URL ${DL_URL} is not found!"
+    echo "ERROR! Recapture file at URL: ${RECAPTURE_URL} is not found! Instalation will be aborted!"
+    exit 1
+fi
+
+GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
+
+if wget --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
+ then
+    echo "OK! Gstreamer Good Plugin file exists at ${GOOD_PLUGIN_URL}"
+ else
+    echo "ERROR! Gstreamer Good Plugin file at URL: ${GOOD_PLUGIN_URL} is not found! Instalation will be aborted!"
     exit 1
 fi
 
@@ -62,7 +72,7 @@ chmod +x $HOME/.local/recapture/recapture-cli-wrapper.sh
 # Removing previously created Desktop icon
 rm -rf ~/Desktop/Recapture.desktop 2>/dev/null
 
-
+sleep 3
 # Create a Desktop icon
 echo "Creating a Desktop Icon"
 echo '[Desktop Entry]
@@ -78,12 +88,14 @@ Terminal=false
 TerminalOptions=
 Type=Application' > $HOME/Desktop/Recapture.desktop
 
-
+sleep 3
 # Remove downloaded files from /tmp
 echo "Removing downloaded archives. we do not require them anymore."
 rm -rf /tmp/recapture_dl_dir 
+
 
 echo "You can now close the terminal window by using CTRL+C or ENTER"
 # alternatively
 # exec bash
 read
+sleep 10
