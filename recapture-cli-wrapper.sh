@@ -27,7 +27,7 @@
 #         Print extra debugging info
 
 # The line below is required only for Steam Deck
-#LD_PRELOAD=${LD_PRELOAD/_32/_64}
+LD_PRELOAD=${LD_PRELOAD/_32/_64}
 
 cd $HOME/.local/recapture
 echo $PWD
