@@ -13,6 +13,7 @@ if wget --spider ${RECAPTURE_URL} 2>/dev/null;
     exit 1
 fi
 
+# Check if the download URL exists.
 GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
 
 if wget --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
