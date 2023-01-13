@@ -8,7 +8,7 @@ Big thanks to the Crankshaft project!
 
 ## Why?
 
-I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to achieve what I wanted or just did not work in Game Mode. Installing Recapture binary and libraries locally, with the help of this bash script, does not require turning off the read-only filesystem on the Steam Deck, installing additional packages with `pacman` or distrobox etc. The function of this CLI wrapper is simple, and has only an option to start and stop recording. I hope it will be useful for others as well.
+I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to achieve what I wanted or just did not work in Game Mode. Installing Recapture binary and libraries locally, with the help of this bash script, does not require turning off the read-only filesystem on the Steam Deck, installing additional packages with `pacman` or distrobox etc. The function of this CLI wrapper is simple, it has only an option to start and stop recording. I hope it will be useful for others as well.
 
 
 ## Installing on your Steam Deck
