@@ -20,7 +20,7 @@ Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.g
 
 No need to make the file executable. Double-clicking the downloaded file will download the Recapture plugin, install a script and create a Desktop Icon. 
 
-You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture plugin records the screen only in Game Mode!
+You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture, with the help of this CLI wrapper, records the screen in Game Mode as well as Desktop Mode.
 
 You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now. 
 
