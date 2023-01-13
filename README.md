@@ -1,7 +1,5 @@
 # Simple Screen Recorder for Steam Deck
-Screen recorder for Steam deck, using a basic, quick and dirty script around the Recapture Plugin from Crankshaft project.
-
-Using [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture)
+Screen recorder for Steam deck, using a basic, quick and dirty script around [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture).
 
 Big thanks to the Crankshaft project!
 
@@ -16,9 +14,9 @@ I had a week off work and wanted to record a game play on my Steam Deck in Game 
 ## Installing on your Steam Deck
 
 You need to be in Desktop Mode.
-Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) on your Steam Deck. Right click the link and save the file somewhere you can find it. 
+Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) on your Steam Deck. Right click the link and save the file somewhere you can find it later.
 
-No need to make the file executable. Double-clicking the downloaded file will download the Recapture plugin, install a script and create a Desktop Icon. 
+No need to make the downloaded file executable. Double-clicking the file will download the Recapture binary and the required libraries, install a script and create a Desktop Icon. 
 
 You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture, with the help of this CLI wrapper, records the screen in Game Mode as well as Desktop Mode.
 
