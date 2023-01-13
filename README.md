@@ -1,5 +1,5 @@
 # Simple Screen Recorder for Steam Deck
-Screen recorder for Steam deck, using a basic, quick and dirty script around [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture).
+Screen recorder for Steam Deck, using a simple script around [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture).
 
 Big thanks to the Crankshaft project!
 
