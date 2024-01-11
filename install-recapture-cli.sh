@@ -4,7 +4,7 @@
 
 # Check if the download URL exists.
 RECAPTURE_URL="https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz"
-if wget --spider ${RECAPTURE_URL} 2>/dev/null; 
+if wget --timeout=3 --tries=3 --spider ${RECAPTURE_URL} 2>/dev/null; 
  then
     echo "OK! Recapture file exists at ${RECAPTURE_URL}"
  else
@@ -14,7 +14,7 @@ fi
 
 # Check if the download URL exists.
 GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
-if wget --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
+if wget --timeout=3 --tries=3 --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
  then
     echo "OK! Gstreamer Good Plugin file exists at ${GOOD_PLUGIN_URL}"
  else
