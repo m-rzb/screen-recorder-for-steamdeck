@@ -1,4 +1,10 @@
 # Simple Screen Recorder for Steam Deck
+
+Update: I have removed recapture binary as a dependency. The script is using gst-launch-1.0 now, which should be already preinstalled on steam deck.
+
+To Do: To amend readme
+
+
 Screen recorder for Steam Deck, using a simple script around [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture).
 
 Big thanks to the Crankshaft project!
