@@ -1,16 +1,10 @@
 # Simple Screen Recorder for Steam Deck
 
-Update: I have removed recapture binary as a dependency. The script is using gst-launch-1.0 now, which should be already preinstalled on steam deck.
 
-To Do: To amend readme
-
-
-Screen recorder for Steam Deck, using a simple script around [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture).
-
-Big thanks to the Crankshaft project!
+This script was initially inspired by [Avery's Recapture binary and libs](https://git.sr.ht/~avery/recapture). However, script is currently using gst-launch-1.0 (preinstalled on steam deck) and additional gstreamer plugins.
 
 
-**Note:** The script will download the Recapture binary and the libraries from Avery's Recapture archive. In addition, for screen recording to work in Desktop Mode the libgstximagesrc.so will be downloaded from the steamos extra repo. I do not maintain those repos and libraries! If the URLs to those repos change or the archives are removed, the script will not function.
+**Note:** The script will download the required gstreamer plugins from the steamos extra repo. I do not maintain those repos and libraries! If the URLs to those repos change or the archives are removed, the script will not function.
 
 ## Why?
 
@@ -30,7 +24,7 @@ You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now.
 
 Back in Game Mode, you should be able to find Recapture app/shortcut. 
 
-The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mp4 in `~/Videos/recapture directory`.
+The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mp4 in `~/Videos directory`.
 
 Note: To make selecting Cancel button easier, go to Recapture's Controller Settings and select "Web Browser" as Current Layout. Now you should be able to press on Cancel by using A button or use the mouse on Steam Deck. You can also Cancel recording by selecting Home, from the left Steam menu, selecting Recapture app and closing the app from there.
 
@@ -39,7 +33,7 @@ Note: To make selecting Cancel button easier, go to Recapture's Controller Setti
  
 ## Warning!
 
-There has been no extensive testing! The script and the Recapture plugin has been working for me at the time of writing of this script. The script is provided as is. I make no promises and give no guarantees. I would not be responsible for any damages caused to your Steam Deck, house, pet etc. Use it at your own risk!
+There has been no extensive testing! The script has been working for me at the time of writing of this script. The script is provided as is. I make no promises and give no guarantees. I would not be responsible for any damages caused to your Steam Deck, house, pet etc. Use it at your own risk!
 
 There might be mistakes in the scripts or more elegant ways of achieving those tasks, however, I do not write code for a living and my free time is limited.
 
