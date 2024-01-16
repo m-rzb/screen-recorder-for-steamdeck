@@ -33,26 +33,17 @@ rm -rf $HOME/.local/recapture &>/dev/null
 # Create plugin instalation directory
 echo "We need to create the instalation directory."
 sleep 1
-mkdir -p $HOME/.local/recapture/lib
+mkdir -p $HOME/.local/recapture/libs
 mkdir -p $HOME/.local/recapture/plugins/good
+mkdir -p $HOME/.local/recapture/plugins/bad
+mkdir -p $HOME/.local/recapture/plugins/vaapi
+mkdir -p $HOME/.local/recapture/plugins/pipewire
 
 echo "Installing the gstreamer plugins and scripts"
 sleep 1
-# Download Recapture plugin.
-mkdir -p /tmp/recapture_dl_dir/plugin                        
+# Lets start downloading in /tmp
+# mkdir -p /tmp/recapture_dl_dir/plugin                        
 cd /tmp  
-#
-# wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
-# 		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
-# tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
- 
-# Move downloaded binary and libs to instalation directory
-# mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
-#
-# Make Recapture binary executable
-# chmod +x $HOME/.local/recapture/recapture
-# 
- sleep 1
 
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
 # Lets download it form steamos extra-rel repo
@@ -61,7 +52,36 @@ mkdir -p /tmp/recapture_dl_dir/plugin/good
 		-O recapture_dl_dir/gst-plugins-good.pkg.tar.zst \
 		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst
 	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-good.pkg.tar.zst -C recapture_dl_dir/plugin/good
-	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/libgstximagesrc.so $HOME/.local/recapture/plugins/good
+	cp recapture_dl_dir/plugin/good/usr/lib/gstreamer-1.0/* $HOME/.local/recapture/plugins/good
+	
+mkdir -p /tmp/recapture_dl_dir/plugin/bad
+	wget \
+		-O recapture_dl_dir/gst-plugins-bad.pkg.tar.zst \
+		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gst-plugins-bad-1.22.3-6-x86_64.pkg.tar.zst
+	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-bad.pkg.tar.zst -C recapture_dl_dir/plugin/bad
+	cp recapture_dl_dir/plugin/bad/usr/lib/gstreamer-1.0/* $HOME/.local/recapture/plugins/bad
+	
+mkdir -p /tmp/recapture_dl_dir/plugin/pipewire
+	wget \
+		-O recapture_dl_dir/gst-plugins-pipewire.pkg.tar.zst \
+		https://steamdeck-packages.steamos.cloud/archlinux-mirror/jupiter-3.5/os/x86_64/gst-plugin-pipewire-1:0.3.62.2.dv-2-x86_64.pkg.tar.zst
+	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-pipewire.pkg.tar.zst -C recapture_dl_dir/plugin/pipewire
+	cp recapture_dl_dir/plugin/pipewire/usr/lib/gstreamer-1.0/* $HOME/.local/recapture/plugins/pipewire
+	
+mkdir -p /tmp/recapture_dl_dir/lib/bad-libs
+	wget \
+		-O recapture_dl_dir/gst-plugins-bad-libs.pkg.tar.zst \
+		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gst-plugins-bad-libs-1.22.3-6-x86_64.pkg.tar.zst
+	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-bad-libs.pkg.tar.zst -C recapture_dl_dir/lib/bad-libs
+	cp recapture_dl_dir/lib/bad-libs/usr/lib/* $HOME/.local/recapture/libs
+	cp recapture_dl_dir/lib/bad-libs/usr/lib/gstreamer-1.0/* $HOME/.local/recapture/plugins/bad
+	
+mkdir -p /tmp/recapture_dl_dir/plugin/vaapi
+	wget \
+		-O recapture_dl_dir/gst-plugins-vaapi.pkg.tar.zst \
+		https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gstreamer-vaapi-1.22.3-6-x86_64.pkg.tar.zst
+	tar --use-compress-program=unzstd -xf recapture_dl_dir/gst-plugins-vaapi.pkg.tar.zst -C recapture_dl_dir/plugin/vaapi
+	cp recapture_dl_dir/plugin/vaapi/usr/lib/gstreamer-1.0/* $HOME/.local/recapture/plugins/vaapi
 
 # Download Recapture CLI wrapper
 wget -O recapture_dl_dir/recapture-cli-wrapper.sh \
