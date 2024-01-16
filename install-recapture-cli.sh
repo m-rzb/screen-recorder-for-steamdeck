@@ -33,7 +33,8 @@ rm -rf $HOME/.local/recapture &>/dev/null
 # Create plugin instalation directory
 echo "We need to create the instalation directory."
 sleep 1
-mkdir -p $HOME/.local/recapture
+mkdir -p $HOME/.local/recapture/lib
+mkdir -p $HOME/.local/recapture/plugins/good
 
 echo "Installing the gstreamer plugins and scripts"
 sleep 1
