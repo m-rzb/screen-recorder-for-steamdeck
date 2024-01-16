@@ -8,15 +8,15 @@ This script was initially inspired by [Avery's Recapture binary and libs](https:
 
 ## Why?
 
-I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to achieve what I wanted or just did not work in Game Mode. Installing Recapture binary and libraries locally, with the help of this bash script, does not require turning off the read-only filesystem on the Steam Deck, installing additional packages with `pacman` or distrobox etc. The function of this CLI wrapper is simple, it has only an option to start and stop recording. I hope it will be useful for others as well.
+I had a week off work and wanted to record a game play on my Steam Deck in Game Mode. I looked for various options, but they were either too complicated to install and achieve my simple requirements or just did not work in Game Mode. The gst-launch-1.0 (gstreamer) is already preinstalled on a up-to-date Steam Deck. Downloading few extra gstreamer libraries locally, with the help of this bash script, does not require `root`, `pacman`, `distrobox` or turning off the read-only filesystem on the Steam Deck. The function of this CLI wrapper is simple, it has only an option to start and stop recording. I hope it will be useful for others as well.
 
 
 ## Installing on your Steam Deck
 
 You need to be in Desktop Mode.
-Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) on your Steam Deck. Right click the link and save the file somewhere you can find it later.
+Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) on your Steam Deck. Right click the [link ](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) and save the file somewhere you can find it later.
 
-No need to make the downloaded file executable. Double-clicking the file will download the required libraries, install a script and create a Desktop Icon. 
+No need to make the downloaded file executable. Double-clicking the file will download the required libraries, install the script and create a Desktop Icon. 
 
 You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture, with the help of this CLI wrapper, records the screen in Game Mode as well as Desktop Mode.
 
