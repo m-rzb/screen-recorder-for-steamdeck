@@ -13,8 +13,7 @@ I had a week off work and wanted to record a game play on my Steam Deck in Game 
 
 ## Installing on your Steam Deck
 
-You need to be in Desktop Mode.
-Download `Install_Recapture_CLI_Wrapper.desktop` using [this link](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) on your Steam Deck. Right click the [link ](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) and save the file somewhere you can find it later.
+You need to be in Desktop Mode on your Steam Deck to download `Install_Recapture_CLI_Wrapper.desktop`. Right click the [link ](https://raw.githubusercontent.com/m-rzb/Screen-recorder-for-steamdeck/main/Install_Recapture_CLI_Wrapper.desktop) and save the file somewhere you can find it later.
 
 No need to make the downloaded file executable. Double-clicking the file will download the required libraries, install the script and create a Desktop Icon. 
 
