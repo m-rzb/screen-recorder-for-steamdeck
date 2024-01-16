@@ -1,16 +1,4 @@
 #!/bin/bash
-#
-#
-
-# Check if the download URL exists.
-#RECAPTURE_URL="https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz"
-#if wget --spider ${RECAPTURE_URL} 2>/dev/null; 
-# then
-#    echo "OK! Recapture file exists at ${RECAPTURE_URL}"
-# else
-#    echo "ERROR! Recapture file at URL: ${RECAPTURE_URL} is not found! Instalation will be aborted!"
-#    exit 1
-#fi
 
 # On Arch to find the correct URL for our package we use:
 # 'pacman -Sup gst-plugins-good'
@@ -19,9 +7,49 @@
 GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
 if wget --timeout=3 --tries=3 --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
  then
-    echo "OK! Gstreamer Good Plugin file exists at ${GOOD_PLUGIN_URL}"
+    echo "OK! Gstreamer GOOD Plugin file exists at ${GOOD_PLUGIN_URL}"
  else
-    echo "ERROR! Gstreamer Good Plugin file at URL: ${GOOD_PLUGIN_URL} is not found! Instalation will be aborted!"
+    echo "ERROR! Gstreamer GOOD Plugin file at URL: ${GOOD_PLUGIN_URL} is not found! Instalation will be aborted!"
+    exit 1
+fi
+
+# Check if the download URL exists.
+BAD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gst-plugins-bad-1.22.3-6-x86_64.pkg.tar.zst"
+if wget --timeout=3 --tries=3 --spider ${BAD_PLUGIN_URL} 2>/dev/null; 
+ then
+    echo "OK! Gstreamer BAD Plugin file exists at ${BAD_PLUGIN_URL}"
+ else
+    echo "ERROR! Gstreamer BAD Plugin file at URL: ${BAD_PLUGIN_URL} is not found! Instalation will be aborted!"
+    exit 1
+fi
+
+# Check if the download URL exists.
+PIPEWIRE_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/jupiter-3.5/os/x86_64/gst-plugin-pipewire-1:0.3.62.2.dv-2-x86_64.pkg.tar.zst"
+if wget --timeout=3 --tries=3 --spider ${PIPEWIRE_PLUGIN_URL} 2>/dev/null; 
+ then
+    echo "OK! Gstreamer PIPEWIRE Plugin file exists at ${PIPEWIRE_PLUGIN_URL}"
+ else
+    echo "ERROR! Gstreamer PIPEWIRE Plugin file at URL: ${PIPEWIRE_PLUGIN_URL} is not found! Instalation will be aborted!"
+    exit 1
+fi
+
+# Check if the download URL exists.
+VAAPI_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gstreamer-vaapi-1.22.3-6-x86_64.pkg.tar.zst"
+if wget --timeout=3 --tries=3 --spider ${VAAPI_PLUGIN_URL} 2>/dev/null; 
+ then
+    echo "OK! Gstreamer VAAPI Plugin file exists at ${VAAPI_PLUGIN_URL}"
+ else
+    echo "ERROR! Gstreamer VAAPI Plugin file at URL: ${VAAPI_PLUGIN_URL} is not found! Instalation will be aborted!"
+    exit 1
+fi
+
+# Check if the download URL exists.
+BAD_LIBS_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-3.5/os/x86_64/gst-plugins-bad-libs-1.22.3-6-x86_64.pkg.tar.zst"
+if wget --timeout=3 --tries=3 --spider ${BAD_LIBS_PLUGIN_URL} 2>/dev/null; 
+ then
+    echo "OK! Gstreamer BAD_LIBS Plugin file exists at ${BAD_LIBS_PLUGIN_URL}"
+ else
+    echo "ERROR! Gstreamer BAD_LIBS Plugin file at URL: ${BAD_LIBS_PLUGIN_URL} is not found! Instalation will be aborted!"
     exit 1
 fi
 
@@ -41,8 +69,8 @@ mkdir -p $HOME/.local/recapture/plugins/pipewire
 
 echo "Installing the gstreamer plugins and scripts"
 sleep 1
-# Lets start downloading in /tmp
-# mkdir -p /tmp/recapture_dl_dir/plugin                        
+# Download Recapture plugin.
+mkdir -p /tmp/recapture_dl_dir/plugin                        
 cd /tmp  
 
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
@@ -120,5 +148,6 @@ rm -rf /tmp/recapture_dl_dir
 
 echo "You can now close the terminal window by using CTRL+C or ENTER"
 # exec bash
-read
+read -rn1
+
 sleep 10
