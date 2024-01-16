@@ -12,6 +12,9 @@
 #    exit 1
 #fi
 
+# On Arch to find the correct URL for our package we use:
+# 'pacman -Sup gst-plugins-good'
+
 # Check if the download URL exists.
 GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
 if wget --timeout=3 --tries=3 --spider ${GOOD_PLUGIN_URL} 2>/dev/null; 
@@ -32,23 +35,24 @@ echo "We need to create the instalation directory."
 sleep 1
 mkdir -p $HOME/.local/recapture
 
-echo "Installing the plugin and scripts"
+echo "Installing the gstreamer plugins and scripts"
 sleep 1
 # Download Recapture plugin.
-mkdir -p /tmp/recapture_dl_dir/plugin                        
-cd /tmp  
-
-wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
-		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
-tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
-
+# mkdir -p /tmp/recapture_dl_dir/plugin                        
+# cd /tmp  
+#
+# wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
+# 		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
+# tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
+# 
 # Move downloaded binary and libs to instalation directory
-mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
-
+# mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
+#
 # Make Recapture binary executable
-chmod +x $HOME/.local/recapture/recapture
+# chmod +x $HOME/.local/recapture/recapture
+# 
+# sleep 1
 
-sleep 1
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
 # Lets download it form steamos extra-rel repo
 mkdir -p /tmp/recapture_dl_dir/plugin/good
