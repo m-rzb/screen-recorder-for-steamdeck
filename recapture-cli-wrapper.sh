@@ -37,7 +37,7 @@ echo "This device will be used to record the audio from."
 
 GST_VAAPI_ALL_DRIVERS=1 \
 GST_PLUGIN_PATH=$HOME/.local/recapture/plugins \
-LD_LIBRARY_PATH=$HOME/.local/recapture/lib \
+LD_LIBRARY_PATH=$HOME/.local/recapture/libs \
     gst-launch-1.0 -e \
                 $RECORDING_SOURCE \
                 $VIDEO_VAR \
