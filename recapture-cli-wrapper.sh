@@ -43,7 +43,7 @@ LD_LIBRARY_PATH=$HOME/.local/recapture/libs \
                 $VIDEO_VAR \
         pulsesrc device="$AUDIO_DEVICE.monitor" \
                 $AUDIO_VAR \
-         mp4mux  name=mux ! filesink location=/home/deck/Videos/"$DATE_VAR".mp4 \
+         mp4mux  name=mux ! filesink location=/home/$USER/Videos/"$DATE_VAR".mp4 \
             & PIPED_PID=$!
 
 while kill -s 0 $PIPED_PID; do sleep .1; done |
