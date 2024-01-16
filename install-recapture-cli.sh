@@ -69,8 +69,7 @@ mkdir -p $HOME/.local/recapture/plugins/pipewire
 
 echo "Installing the gstreamer plugins and scripts"
 sleep 1
-# Download Recapture plugin.
-mkdir -p /tmp/recapture_dl_dir/plugin                        
+# Lets start in /tmp directory                       
 cd /tmp  
 
 # For the screen recording to work in Desktop mode, we require gstreamer good plugin libgstximagesrc.so
