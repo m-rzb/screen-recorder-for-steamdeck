@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # On Arch to find the correct URL for our package we use:
-# 'pacman -Sup gst-plugins-good'
+# pacman -Sddp gst-plugins-good
+# pacman -Sddp gst-plugins-bad
+# pacman -Sddp gst-plugin-pipewire
+# pacman -Sddp gstreamer-vaapi
+# pacman -Sddp gst-plugins-bad-libs
 
 # Check if the download URL exists.
 GOOD_PLUGIN_URL="https://steamdeck-packages.steamos.cloud/archlinux-mirror/extra-rel/os/x86_64/gst-plugins-good-1.20.4-1-x86_64.pkg.tar.zst"
