@@ -41,15 +41,15 @@ sleep 1
 mkdir -p /tmp/recapture_dl_dir/plugin                        
 cd /tmp  
 #
-wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
- 		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
-tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
+# wget -O recapture_dl_dir/recapture-0.1.3.tar.gz \
+# 		https://git.sr.ht/~avery/recapture/refs/download/plugin-0.1.3/recapture-0.1.3.tar.gz
+# tar -xvzf recapture_dl_dir/recapture-0.1.3.tar.gz -C recapture_dl_dir/plugin
  
 # Move downloaded binary and libs to instalation directory
-mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
+# mv recapture_dl_dir/plugin/recapture/dist/deps/* $HOME/.local/recapture
 #
 # Make Recapture binary executable
-chmod +x $HOME/.local/recapture/recapture
+# chmod +x $HOME/.local/recapture/recapture
 # 
  sleep 1
 
