@@ -49,4 +49,4 @@ LD_LIBRARY_PATH=$HOME/.local/recapture/libs \
 while kill -s 0 $PIPED_PID; do sleep .1; done |
 
 
-( zenity --progress --window-icon=/usr/share/icons/breeze/actions/16/media-record.svg --width 555 --height 35 --title="Recording in progress" --text="<big><b>Screen recording is in progress!</b></big>\n\nYour system currently uses <b>$DISPLAY_SERVER</b>.\nIdentified audio device is <b>$AUDIO_DEVICE</b>\n\nThe video will be saved in <b>$HOME/Videos/recapture/</b>\n\n\nPress <b>Cancel</b> to stop recording." --pulsate --default-cancel  || kill -2 $PIPED_PID )
+( zenity --progress --window-icon=/usr/share/icons/breeze/actions/16/media-record.svg --width 555 --height 35 --title="Recording in progress" --text="<big><b>Screen recording is in progress!</b></big>\n\nYour system currently uses <b>$DISPLAY_SERVER</b>.\nIdentified audio device is <b>$AUDIO_DEVICE</b>\n\nThe video will be saved in <b>$HOME/Videos/</b>\n\n\nPress <b>Cancel</b> to stop recording." --pulsate --default-cancel  || kill -2 $PIPED_PID )
