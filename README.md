@@ -23,7 +23,7 @@ You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now.
 
 Back in Game Mode, you should be able to find Recapture app/shortcut. 
 
-The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mp4 in `~/Videos directory`.
+The function is very basic. You can only Start and Cancel the screen recording. All videos are saved as mkv in `~/Videos directory`.
 
 Note: To make selecting Cancel button easier, go to Recapture's Controller Settings and select "Web Browser" as Current Layout. Now you should be able to press on Cancel by using A button or use the mouse on Steam Deck. You can also Cancel recording by selecting Home, from the left Steam menu, selecting Recapture app and closing the app from there.
 
