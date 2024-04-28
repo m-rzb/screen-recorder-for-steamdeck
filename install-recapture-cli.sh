@@ -125,12 +125,13 @@ mv recapture_dl_dir/recapture-cli-wrapper.sh $HOME/.local/recapture/recapture-cl
 chmod +x $HOME/.local/recapture/recapture-cli-wrapper.sh
 
 # Removing previously created Desktop icon
-rm -rf ~/Desktop/Recapture.desktop 2>/dev/null
+rm -rf $HOME/Desktop/Recapture.desktop 2>/dev/null
 
 sleep 3
 # Create a Desktop icon
 echo "Creating a Desktop Icon"
-echo '[Desktop Entry]
+echo '#!/usr/bin/env xdg-open
+[Desktop Entry]
 Comment=
 Exec=/bin/bash $HOME/.local/recapture/recapture-cli-wrapper.sh
 GenericName=
