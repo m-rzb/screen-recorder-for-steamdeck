@@ -131,7 +131,8 @@ rm -rf $HOME/Desktop/Recapture.desktop 2>/dev/null
 sleep 3
 # Create a Desktop icon
 echo "Creating a Desktop Icon"
-echo '[Desktop Entry]
+echo '#!/usr/bin/env xdg-open
+[Desktop Entry]
 Type=Application
 Name=Recapture
 GenericName=Screen Recorder
@@ -151,7 +152,8 @@ rm -rf $HOME/.local/share/applications/Recapture.desktop 2>/dev/null
 sleep 3
 # # Creating Start Menu Icon
 echo "Creating a Start Menu Icon"
-echo '[Desktop Entry]
+echo '#!/usr/bin/env xdg-open
+[Desktop Entry]
 Type=Application
 Name=Recapture
 GenericName=Screen Recorder
