@@ -130,18 +130,12 @@ rm -rf $HOME/Desktop/Recapture.desktop 2>/dev/null
 sleep 3
 # Create a Desktop icon
 echo "Creating a Desktop Icon"
-echo '#!/usr/bin/env xdg-open
-[Desktop Entry]
-Comment=
-Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
-GenericName=
-Icon=media-record-symbolic
-MimeType=
+echo '[Desktop Entry]
 Name=Recapture
-Path=
+Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
+Icon=media-record-symbolic
 StartupNotify=false
 Terminal=false
-TerminalOptions=
 Type=Application' > $HOME/Desktop/Recapture.desktop
 
 sleep 3
