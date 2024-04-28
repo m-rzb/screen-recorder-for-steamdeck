@@ -140,6 +140,24 @@ Terminal=false
 Type=Application' > $HOME/Desktop/Recapture.desktop
 chmod +x $HOME/Desktop/Recapture.desktop
 
+# Removing previously created Start Menu Icon
+rm -rf $HOME/.local/share/applications/Recapture.desktop 2>/dev/null
+
+sleep 3
+# # Create Start Menu Icon
+echo "Creating a Start Menu Icon"
+echo '#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Recapture
+Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
+Icon=media-record-symbolic
+StartupNotify=false
+Terminal=false
+Type=Application' > $HOME/.local/share/applications/Recapture.desktop
+chmod +x $HOME/.local/share/applications/Recapture.desktop
+
+update-desktop-database ~/.local/share/applications
+
 sleep 3
 # Remove downloaded files from /tmp
 echo "Removing downloaded archives. we do not require them anymore."
