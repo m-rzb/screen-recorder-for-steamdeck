@@ -131,14 +131,16 @@ rm -rf $HOME/Desktop/Recapture.desktop 2>/dev/null
 sleep 3
 # Create a Desktop icon
 echo "Creating a Desktop Icon"
-echo '#!/usr/bin/env xdg-open
-[Desktop Entry]
+echo '[Desktop Entry]
+Type=Application
 Name=Recapture
-Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
+GenericName=Screen Recorder
+Comment=GStreamer based screen recorder
+Exec=bash "$HOME/.local/recapture/recapture-cli-wrapper.sh"
 Icon=media-record-symbolic
 Terminal=false
 Type=Application
-Categories=Utility
+Categories=AudioVideo;Recorder;
 StartupNotify=false' > $HOME/Desktop/Recapture.desktop
 chmod +x $HOME/Desktop/Recapture.desktop
 
@@ -149,14 +151,16 @@ rm -rf $HOME/.local/share/applications/Recapture.desktop 2>/dev/null
 sleep 3
 # # Creating Start Menu Icon
 echo "Creating a Start Menu Icon"
-echo '#!/usr/bin/env xdg-open
-[Desktop Entry]
+echo '[Desktop Entry]
+Type=Application
 Name=Recapture
-Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
+GenericName=Screen Recorder
+Comment=GStreamer based screen recorder
+Exec=bash "$HOME/.local/recapture/recapture-cli-wrapper.sh"
 Icon=media-record-symbolic
 Terminal=false
 Type=Application
-Categories=Utility
+Categories=AudioVideo;Recorder;
 StartupNotify=false' > $HOME/.local/share/applications/Recapture.desktop
 chmod +x $HOME/.local/share/applications/Recapture.desktop
 
