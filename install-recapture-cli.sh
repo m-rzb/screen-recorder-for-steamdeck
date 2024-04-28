@@ -137,6 +137,7 @@ Icon=media-record-symbolic
 StartupNotify=false
 Terminal=false
 Type=Application' > $HOME/Desktop/Recapture.desktop
+chmod +x $HOME/Desktop/Recapture.desktop
 
 sleep 3
 # Remove downloaded files from /tmp
