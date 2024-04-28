@@ -17,7 +17,7 @@ You need to be in Desktop Mode on your Steam Deck to download `Install_Recapture
 
 No need to make the downloaded file executable. Double-clicking the file will download the required libraries, install the script and create a Desktop Icon. 
 
-You should add now the `Recapture.desktop` file as Non-Steam Game. Recapture, with the help of this CLI wrapper, records the screen in Game Mode as well as Desktop Mode.
+You should add now the `Recapture.desktop` file as Non-Steam Game. GStreamer, with the help of this CLI wrapper, records the screen in Game Mode as well as Desktop Mode.
 
 You can delete the `Install_Recapture_CLI_Wrapper.desktop` file now. 
 
