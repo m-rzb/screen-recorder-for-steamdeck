@@ -136,9 +136,10 @@ echo '#!/usr/bin/env xdg-open
 Name=Recapture
 Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
 Icon=media-record-symbolic
-StartupNotify=false
 Terminal=false
-Type=Application' > $HOME/Desktop/Recapture.desktop
+Type=Application
+Categories=Utility
+StartupNotify=false' > $HOME/Desktop/Recapture.desktop
 chmod +x $HOME/Desktop/Recapture.desktop
 
 # Removing previously created Start Menu Icon
@@ -153,9 +154,10 @@ echo '#!/usr/bin/env xdg-open
 Name=Recapture
 Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
 Icon=media-record-symbolic
-StartupNotify=false
 Terminal=false
-Type=Application' > $HOME/.local/share/applications/Recapture.desktop
+Type=Application
+Categories=Utility
+StartupNotify=false' > $HOME/.local/share/applications/Recapture.desktop
 chmod +x $HOME/.local/share/applications/Recapture.desktop
 
 echo "Updating Desktop Database"
