@@ -133,7 +133,7 @@ echo "Creating a Desktop Icon"
 echo '#!/usr/bin/env xdg-open
 [Desktop Entry]
 Comment=
-Exec=/bin/bash $HOME/.local/recapture/recapture-cli-wrapper.sh
+Exec=bash $HOME/.local/recapture/recapture-cli-wrapper.sh
 GenericName=
 Icon=media-record-symbolic
 MimeType=
