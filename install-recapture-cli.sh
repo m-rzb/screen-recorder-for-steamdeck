@@ -125,6 +125,7 @@ mv recapture_dl_dir/recapture-cli-wrapper.sh $HOME/.local/recapture/recapture-cl
 chmod +x $HOME/.local/recapture/recapture-cli-wrapper.sh
 
 # Removing previously created Desktop icon
+echo "Removing previously created Desktop icon"
 rm -rf $HOME/Desktop/Recapture.desktop 2>/dev/null
 
 sleep 3
@@ -141,10 +142,11 @@ Type=Application' > $HOME/Desktop/Recapture.desktop
 chmod +x $HOME/Desktop/Recapture.desktop
 
 # Removing previously created Start Menu Icon
+echo "Removing previously created Start Menu Icon"
 rm -rf $HOME/.local/share/applications/Recapture.desktop 2>/dev/null
 
 sleep 3
-# # Create Start Menu Icon
+# # Creating Start Menu Icon
 echo "Creating a Start Menu Icon"
 echo '#!/usr/bin/env xdg-open
 [Desktop Entry]
@@ -156,6 +158,7 @@ Terminal=false
 Type=Application' > $HOME/.local/share/applications/Recapture.desktop
 chmod +x $HOME/.local/share/applications/Recapture.desktop
 
+echo "Updating Desktop Database"
 update-desktop-database ~/.local/share/applications
 
 sleep 3
